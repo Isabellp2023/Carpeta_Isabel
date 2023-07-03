@@ -45,7 +45,7 @@ button {
 
 .button-active {
     background-color: (var(--secundary));
-    color : var(--primary);
+    color : black;
 
 }
 
