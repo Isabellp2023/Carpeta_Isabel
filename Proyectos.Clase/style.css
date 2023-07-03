@@ -1,32 +1,55 @@
-:root {
+ /* PALETTE */
+
+ :root {
     --primary:  #dfe4e3;
     --secundary: #0d0d0d; 
     font-family: Arial, Helvetica, sans-serif;
 }
+ /* RESET */
 
-*{ margin: 0;
+*{ 
+   margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
+
+/* GLOBAL STYLES */
+
 body {
-    background-color: var(#dfe4e3);
-    color: var(#0d0d0d);
+    background-color: var(--primary);
+    color: var(--secundary);
     background-image: url(./assets/images/background.jpg); 
-    background-size: ;
+    background-size: cover;
     background-attachment: fixed;
     height : 900vh;
-} 
-header {
-    
-}
+}     
+
 li {
-    list-style-type: nome;
+    list-style-type: none;
 }
 a {
-    text-decoration: nome;
-    color: var(#0d0d0d);
+    text-decoration: none;
+    color: var(--secundary);
 }
 
+button {
+
+    border: 2px solid var(--secundary);
+    padding: 5px 10px;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+
+}
+
+.button-active {
+    background-color: (var(--secundary));
+    color : var(--primary);
+
+}
+
+/* NAVBAR */
 nav > ul {
     
     height: 100px;
@@ -38,6 +61,71 @@ nav > ul {
 
 }
 nav img {
-    height: 40px;
+    height: 60px;
     width: auto;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+header > img {
+    width: 350px;
+
+}
+
+header > h2 {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+header > h1 {
+    text-transform: uppercase;
+}
+
+header .social img {
+    height: 30px;
+    width: auto;
+    filter: invert(90%);
+}
+
+header ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+/* MAIN */
+main > h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px;
+}
+
+main > ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+}
+
+@media screen and (min-width: 650px) {
+    main > ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+main > ul > li {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+main img {
+    width: 100%
 }
