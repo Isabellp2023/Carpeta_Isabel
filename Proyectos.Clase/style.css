@@ -64,7 +64,13 @@ nav img {
     height: 60px;
     width: auto;
 }
-
+@keyframes Rotate 
+{from {transform: rotate(0deg)} 
+to{transform: rotate(800deg)}}
+.logo {
+    position: relative;
+    animation: Rotate 10s linear infinite;
+}
 /* HEADER */
 header{
     display: flex;
